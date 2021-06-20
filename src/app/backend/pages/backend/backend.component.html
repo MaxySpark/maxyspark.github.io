@@ -1,2 +1,18 @@
-<app-url-accordion [api]="aboutApi"></app-url-accordion>
-<!-- <app-json-wrapper></app-json-wrapper> -->
+<div class="rounded shadow-xl mb-10 flex justify-center items-center py-5 px-2">
+  <div class="bg-green-400 rounded-full h-32 w-32 mr-10 hidden md:flex justify-center items-center">
+    <img src="/assets/pic.png" class="rounded-full h-20" >
+  </div>
+
+  <div class="flex flex-col">
+    <span class="text-2xl italic font-semibold">
+      Trying to build a portfolio site as Backend Developer 🙏🏽
+    </span>
+    <span class="text-lg font-semibold">Bhargab Hazarika</span>
+    <span class="font-semibold text-gray-500">Software Developer Engineer, Springworks</span>
+  </div>
+</div>
+
+<div class="mb-5" *ngFor="let api of apis">
+  <app-url-accordion [api]="api"></app-url-accordion>
+</div>
+

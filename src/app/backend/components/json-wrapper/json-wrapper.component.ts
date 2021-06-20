@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CodeModel } from '@ngstack/code-editor';
+import { v4 } from 'uuid';
 
 @Component({
   selector: 'app-json-wrapper',
@@ -13,12 +14,13 @@ export class JsonWrapperComponent implements OnInit {
 
   codeModel: CodeModel = {
     language: 'json',
-    uri: 'main.json',
+    uri: `${v4()}.json`,
     value: '',
   };
 
   options = {
     contextmenu: true,
+    wordWrap: 'on',
     minimap: {
       enabled: false,
     },

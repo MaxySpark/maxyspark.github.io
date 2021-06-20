@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { About } from 'src/app/data/data';
+import { About, apis } from 'src/app/data/data';
 
 @Component({
   selector: 'app-backend',
@@ -7,7 +7,7 @@ import { About } from 'src/app/data/data';
   styleUrls: ['./backend.component.scss']
 })
 export class BackendComponent implements OnInit {
-  aboutApi = About;
+  apis = apis;
   constructor() { }
 
   ngOnInit(): void {

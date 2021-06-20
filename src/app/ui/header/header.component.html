@@ -1,7 +1,7 @@
-<div class="w-full shadow-2xl">
-  <div class="w-full h-16 bg-white flex flex-row justify-center items-center">
-    <span
-      class="p-2 px-4 mr-2 bg-green-400 hover:bg-green-600 hover:text-white rounded-xl shadow-2xl cursor-pointer text-lg  font-semibold"
-      *ngFor="let navButton of navButtons">{{navButton.name}}</span>
+<div class="w-full shadow-2xl pt-2 md:pt-0">
+  <div class="w-full h-8 md:h-16 bg-white flex flex-row justify-center items-center">
+    <span [title]="navButton.name"
+      class="p-2 px-4 mr-2 bg-green-400 hover:bg-green-600 hover:text-white rounded md:rounded-xl md:shadow-2xl cursor-pointer text-lg  font-semibold"
+      *ngFor="let navButton of navButtons"><span class="md:hidden">{{navButton.icon}}</span><span class="hidden md:block">{{navButton.name}}</span></span>
   </div>
 </div>

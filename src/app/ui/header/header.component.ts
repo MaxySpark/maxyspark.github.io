@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface NavButton {
+  icon: string;
   name: string;
   link?: string;
 }
@@ -12,18 +13,23 @@ export interface NavButton {
 export class HeaderComponent implements OnInit {
   navButtons: NavButton[] = [
     {
+      icon: '🏠',
       name: '🏠 Home'
     },
     {
+      icon: '💁🏽‍♂️',
       name: '💁🏽‍♂️ About'
     },
     {
+      icon: '💪🏽',
       name: '💪🏽 Skills'
     },
     {
+      icon: '🧑🏽‍💻',
       name: '🧑🏽‍💻 Work Experience'
     },
     {
+      icon: '📠',
       name: '📠 Contact'
     },
   ]
