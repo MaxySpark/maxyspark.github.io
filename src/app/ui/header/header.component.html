@@ -1,1 +1,7 @@
-<p>header works!</p>
+<div class="w-full shadow-2xl">
+  <div class="w-full h-16 bg-white flex flex-row justify-center items-center">
+    <span
+      class="p-2 px-4 mr-2 bg-green-400 hover:bg-green-600 hover:text-white rounded-xl shadow-2xl cursor-pointer text-lg  font-semibold"
+      *ngFor="let navButton of navButtons">{{navButton.name}}</span>
+  </div>
+</div>

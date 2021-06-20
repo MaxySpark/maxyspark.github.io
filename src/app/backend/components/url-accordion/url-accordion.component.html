@@ -1,0 +1,23 @@
+<div
+  class="w-full h-10 bg-blue-600 flex flex-row justify-start items-center pl-4 text-white font-medium text-lg rounded-t-md"
+  >
+  <span class="mr-5">{{api.title}}</span>
+  <button (click)="toggleCode()"
+    class="text-green-100 transition-colors duration-150 bg-green-700 rounded-lg focus:shadow-outline hover:bg-green-800 focus:outline-none flex justify-center items-center">
+    <span class="mx-2 font-semibold">RUN</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+    </svg>
+  </button>
+  <app-spinner *ngIf="showSpinner"></app-spinner>
+
+</div>
+<div class="w-full h-10 bg-blue-300 flex flex-row justify-start items-center pl-4 text-white font-medium text-lg"
+  [ngClass]="{'rounded-b-md': !showCode}">
+  <span class="mr-5">{{api.method}}</span>
+  <span class="mr-5">{{api.url}}</span>
+
+</div>
+<div *ngIf="showCode">
+  <app-json-wrapper [value]="api.data"></app-json-wrapper>
+</div>
